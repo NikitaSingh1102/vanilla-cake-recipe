@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+        
+body{
+    background-color: #f9f3e9;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+        
+ /* Recipe Card Container */
+.recipe-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+ }
+        
+.recipe-card:hover {
+    transform: scale(1.02);
+}
+
+/* Header Section */
+.recipe-header {
+    padding: 30px;
+    text-align: center;
+    font-style: italic;
+    background: linear-gradient(135deg, #e4262c 0%, #eadedb 100%);
+    color: white;
+}
+        
+.recipe-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+        
+.recipe-meta {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+        
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Recipe Image */
+.recipe-image {
+    object-fit: cover;
+    border-bottom: 1px solid #ec1111;
+    height: 800px;
+}
+        
+/* Recipe Content */
+.recipe-content {
+    padding: 30px;
+}
+        
+/* Ingredients Section */
+.ingredients {
+    background-color: #fef6f6;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+}
+        
+.ingredients.hidden {
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+}
+        
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f63c09;
+    border-bottom: 2px solid #484646;
+    padding-bottom: 5px;
+}
+        
+.ingredients-list {
+    list-style-type: none;
+}
+        
+.ingredients-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #ddd;
+    transition: color 0.3s;
+}
+        
+.ingredients-list li:hover {
+    color: blue;
+    text-decoration: underline;
+}
+        
+/* Instructions Section */
+.instructions {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+        
+.instructions-list {
+    list-style-type: none;
+    counter-reset: step-counter;
+}
+        
+.instructions-list li {
+    counter-increment: step-counter;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 40px;
+    transition: background-color 0.3s;
+}
+.instructions-list li:hover {
+    color: rgb(206, 55, 47);
+    text-decoration: underline;
+}
+        
+.instructions-list li.highlight {
+    background-color: rgb(197, 197, 237);
+}
+        
+.instructions-list li::before {
+    content: counter(step-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #605d5d;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+        
+/* Buttons */
+.button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+        
+.button:hover {
+    background-color: #c0392b;
+}
+        
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+        
+.progress-bar {
+    height: 20px;
+    background-color: green;
+    width: 0;
+    transition: width 0.3s;
+}
+        
+/* Footer */
+.recipe-footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    font-style: italic;
+    color: #666;
+}
+        
+/* Responsive Design */
+@media (max-width: 768px) {
+    .recipe-content {
+        padding: 15px;
+    }
+}

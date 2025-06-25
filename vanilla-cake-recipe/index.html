@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Interactive Vanilla Cake Recipe</title>
+    </head>
+<body>
+    <div class="recipe-card">
+        <div class="recipe-header">
+            <h1 class="recipe-title">Vanilla Cake</h1>
+            <div class="recipe-meta">
+                <div class="meta-item">Prep: 20 mins</div>
+                <div class="meta-item">Cook: 30 mins</div>
+                <div class="meta-item">Serves: 8</div>
+            </div>
+        </div>
+        
+        <img src="vanilla-cake.png" alt="Vanilla Cake" class="recipe-image">
+        
+        <div class="recipe-content">
+            <div class="ingredients hidden" id="ingredients">
+                <h2 class="section-title">Ingredients</h2>
+                <ul class="ingredients-list">
+                    <li>➡ 2 cups all-purpose flour</li>
+                    <li>➡ 1 ½ cups granulated sugar</li>
+                    <li>➡ ½ cup unsalted butter, softened</li>
+                    <li>➡ 1 cup milk</li>
+                    <li>➡ 3 ½ teaspoons baking powder</li>
+                    <li>➡ 1 teaspoon vanilla extract</li>
+                    <li>➡ ½ teaspoon salt</li>
+                    <li>➡ 3 large eggs</li>
+                </ul>
+            </div>
+            
+            <div class="instructions">
+                <h2 class="section-title">Instructions</h2>
+                <ol class="instructions-list" id="instructions">
+                    <li>Preheat your oven to 350°F (175°C). Grease and flour two 9-inch round cake pans.</li>
+                    <li>In a large bowl, combine the flour, baking powder, and salt. Set aside.</li>
+                    <li>Cream together the softened butter and granulated sugar until light and fluffy.</li>
+                    <li>Beat in the eggs one at a time, then stir in the vanilla extract.</li>
+                    <li>Gradually add the dry ingredients to the butter mixture, alternating with the milk. Mix until just combined.</li>
+                    <li>Divide the batter evenly between the prepared cake pans.</li>
+                    <li>Bake for 25-30 minutes, or until a toothpick inserted into the center comes out clean.</li>
+                    <li>Allow the cakes to cool in the pans for 10 minutes, then turn them out onto wire racks to cool completely.</li>
+                    <li>In a large bowl, beat the softened butter until creamy. Gradually add the powdered sugar, mixing well. Add the vanilla extract and enough milk to achieve your desired consistency.</li>
+                    <li>Once the cakes are completely cool, spread frosting on the top of one layer, place the second layer on top, and frost the top and sides of the cake.</li>
+                </ol>
+            </div>
+            <button class="button" id="toggle-ingredients">Show Ingredients</button>
+            <button class="button" id="start-cooking">Start Cooking</button>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+        </div>
+        
+        <div class="recipe-footer">
+            <p>Enjoy your delicious homemade vanilla cake!</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    </body>
+</html>
